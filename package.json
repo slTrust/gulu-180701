@@ -1,0 +1,23 @@
+{
+  "name": "gulu",
+  "version": "1.0.0",
+  "description": "这是一个ui框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slTrust/gulu-180701.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "huangjx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slTrust/gulu-180701/issues"
+  },
+  "homepage": "https://github.com/slTrust/gulu-180701#readme"
+}
