@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>轱辘</title>
     <style>
-        *{margin:0;padding:0;box-sizing: border-box;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
     </style>
     <style>
         :root {
@@ -19,16 +24,39 @@
             --border-color: #999;
             --border-color-hover: #666;
         }
+
+        #app {
+            margin: 20px;
+        }
+
+        body {
+            font-size: var(--font-size);
+        }
     </style>
     <style>
-        
+        .icon {
+            width: 1em;
+            height: 1em;
+        }
     </style>
 </head>
+
 <body>
-<div id="app">
-    {{msg}}
-    <g-button></g-button>
-</div>
-<script src="./src/app.js"></script>
+    <div id="app">
+        <g-button>
+            我爱js
+        </g-button>
+        <g-button icon="setting">
+            我爱js
+        </g-button>
+        <g-button icon="setting" icon-position="right">
+            我爱js
+        </g-button>
+
+
+    </div>
+    <script src="./src/app.js"></script>
+    <script src="//at.alicdn.com/t/font_720640_gaqkkpfkngg.js"></script>
 </body>
+
 </html>
