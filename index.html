@@ -34,32 +34,44 @@
         }
     </style>
     <style>
+        .box{margin:20px;}
     </style>
 </head>
 
 <body>
     <div id="app">
-        <g-button :loading="loading1" @click=" loading1 = !loading1">
-            我爱js
-        </g-button>
-        <g-button icon="setting" :loading="loading2" @click=" loading2 = !loading2">
-            我爱js
-        </g-button>
-        <g-button icon="setting" icon-position="right" :loading="loading3" @click=" loading3 = !loading3">
-            我爱js
-        </g-button>
-        <g-icon name="download"></g-icon>
-        <g-button-group>
-            <g-button icon="left">
-                上一页
+        <div class="box">
+            <g-input value="张三"></g-input>
+            <!-- 直接 disabled  或者 :disabled="true"-->
+            <g-input value="李四" disabled></g-input>
+            <g-input value="王五" readonly></g-input>
+        </div>
+        <div class="box">
+            <g-input value="王" error="姓名不能少于两个字"></g-input>
+        </div>
+        <div style="margin:20px">
+            <g-button :loading="loading1" @click=" loading1 = !loading1">
+                我爱js
             </g-button>
-            <g-button>
-                更多
+            <g-button icon="setting" :loading="loading2" @click=" loading2 = !loading2">
+                我爱js
             </g-button>
-            <g-button icon="right" icon-position="right">
-                下一页
+            <g-button icon="setting" icon-position="right" :loading="loading3" @click=" loading3 = !loading3">
+                我爱js
             </g-button>
-        </g-button-group>
+            <g-icon name="download"></g-icon>
+            <g-button-group>
+                <g-button icon="left">
+                    上一页
+                </g-button>
+                <g-button>
+                    更多
+                </g-button>
+                <g-button icon="right" icon-position="right">
+                    下一页
+                </g-button>
+            </g-button-group>
+        </div>
     </div>
     <script src="./src/app.js"></script>
 </body>
