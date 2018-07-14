@@ -11,7 +11,7 @@
         let keys = Object.keys(value)
         let valid = true
         keys.forEach((key)=>{
-            if(['span','offset'].includes(key)){
+            if(!['span','offset'].includes(key)){
                 valid = false
             }
         })
@@ -43,10 +43,10 @@
                 return [
                     span && `col-${span}`,
                     offset && `offset-${offset}`,
-                    ...(ipad && [`col-ipad-${ipad.span}`]),
-                    ...(narrowPc && [`col-narrow-pc-${narrowPc.span}`]),
-                    ...(pc && [`col-pc-${pc.span}`]),
-                    ...(widePc && [`col-wide-pc-${widePc.span}`])
+                    ...(ipad ? [`col-ipad-${ipad.span}`]:[]),
+                    ...(narrowPc ? [`col-narrow-pc-${narrowPc.span}`]:[]),
+                    ...(pc ? [`col-pc-${pc.span}`]:[]),
+                    ...(widePc ? [`col-wide-pc-${widePc.span}`]:[])
                 ]
             },
             colStyle(){
@@ -79,7 +79,7 @@
             }
         }
 
-        @media (min-width:577px) and (max-width: 768px) {
+        @media (min-width:577px) {
             $class-prefix: col-ipad-;
             @for $n from 1 through 24 {
 
@@ -97,7 +97,7 @@
                 }
             }
         }
-        @media (min-width: 769px) and (max-width:992px) {
+        @media (min-width: 769px)  {
             $class-prefix: col-narrow-pc-;
             @for $n from 1 through 24 {
 
@@ -115,7 +115,7 @@
                 }
             }
         }
-        @media (min-width:993px) and (max-width: 1200px) {
+        @media (min-width:993px) {
             $class-prefix: col-pc-;
             @for $n from 1 through 24 {
 
